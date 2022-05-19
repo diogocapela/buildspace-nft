@@ -24,8 +24,12 @@ async function main() {
   // Call the function.
   let txn = await nftContract.makeAnEpicNFT();
 
+  console.log("oi");
+
   // Wait for it to be mined.
   await txn.wait();
+
+  console.log("oioi");
 
   // Mint another NFT for fun.
   txn = await nftContract.makeAnEpicNFT();
