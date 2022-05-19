@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "rm -rf artifacts && rm -rf cache && rm -rf typechain",
     "auto:generate-nft-data": "npm run clean && ts-node automation/generateNFTData.ts",
+    "deploy": "npx hardhat run scripts/deploy.ts",
     "deploy:rinkeby": "npx hardhat run scripts/deploy.ts --network rinkeby"
   },
   "dependencies": {
