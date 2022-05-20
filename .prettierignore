@@ -1,0 +1,5 @@
+node_modules
+packages/bsnft-blockchain/artifacts
+packages/bsnft-blockchain/cache
+packages/bsnft-blockchain/coverage*
+packages/bsnft-blockchain/gasReporterOutput.json

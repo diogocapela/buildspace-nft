@@ -1,4 +1,5 @@
 node_modules
+packages/bsnft-web/.next/
 .env
 coverage
 coverage.json

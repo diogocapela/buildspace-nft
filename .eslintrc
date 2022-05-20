@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2020": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "prettier"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": 0,
+    "camelcase": 0,
+    "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "prettier/prettier": "error",
+    "react/destructuring-assignment": 0,
+    "react/display-name": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 0,
+    "react/no-unescaped-entities": 0,
+    "react/require-default-props": 0,
+    "react/prop-types": 0,
+    "no-nested-ternary": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 0,
+    "no-restricted-exports": 0
+  }
+}

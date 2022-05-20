@@ -1,0 +1,43 @@
+{
+  "name": "buildspace-nft",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "npm run clean --ws --if-present && npm exec --ws -- npx rimraf node_modules && npx rimraf node_modules",
+    "build": "turbo run build --no-cache",
+    "start": "turbo run start --no-cache",
+    "dev": "turbo run dev  --no-cache --parallel",
+    "blockchain:deploy": "npm run deploy -w=@bsnft/blockchain",
+    "blockchain:deploy:rinkeby": "npm run deploy:rinkeby -w=@bsnft/blockchain",
+    "typescript:check": "tsc",
+    "eslint:lint": "eslint ."
+  },
+  "dependencies": {
+    "turbo": "1.2.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.18.0",
+    "@typescript-eslint/parser": "5.18.0",
+    "eslint": "8.12.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-import-resolver-typescript": "2.7.1",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.4.0",
+    "patch-package": "6.2.2",
+    "prettier": "2.6.2",
+    "prettier-plugin-solidity": "1.0.0-beta.13",
+    "solhint": "3.3.7",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.4"
+  }
+}

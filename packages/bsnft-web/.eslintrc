@@ -1,0 +1,103 @@
+
+{
+  "extends": "../../.eslintrc",
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": ["tsconfig.json", "packages/bsnft-web/tsconfig.json"]
+      },
+      "node": {
+        "project": ["tsconfig.json", "packages/bsnft-web/tsconfig.json"]
+      }
+    }
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "pathGroups": [
+          {
+            "group": "internal",
+            "pattern": "@web/config/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/pages/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/data/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/public/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/locales/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/store/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/utils/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/hooks/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/layouts/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/partials/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/components/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/theme/**",
+            "position": "after"
+          },
+          {
+            "group": "internal",
+            "pattern": "@web/theme",
+            "position": "after"
+          }
+        ]
+      }
+    ]
+  }
+}
