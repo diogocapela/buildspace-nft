@@ -32,6 +32,9 @@ const config: HardhatUserConfig = {
       accounts: process.env.RINKEBY_PRIVATE_KEY !== undefined ? [process.env.RINKEBY_PRIVATE_KEY] : [],
     },
   },
+  etherscan: {
+    apiKey: 'U3PWPXRW3Y5TUXXA6EBXEEYEHKVXWI5C86',
+  },
 };
 
 export default config;

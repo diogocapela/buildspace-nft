@@ -19,6 +19,8 @@ contract SandboxNFT is ERC721URIStorage {
   string[] secondWords = ["JavaScript", "Python", "C", "C++", "Ruby", "Java", "Kotlin", "Objective-C", "Pascal", "Prolog"];
   string[] thirdWords = ["White", "Black", "Red", "Green", "Blue", "Yellow", "Brown", "Orange", "Pink", "Purple"];
 
+  event NewNFTMinted(address sender, uint256 tokenId);
+
   constructor() ERC721 ("SandboxNFT", "SANDBOX") {
     console.log("This is my NFT contract. Woah!");
   }
@@ -48,7 +50,7 @@ contract SandboxNFT is ERC721URIStorage {
   }
 
   // A function our user will hit to get their NFT.
-  function makeAnEpicNFT() public {
+  function mintNewNFT() public {
      // Get the current tokenId, this starts at 0.
     uint256 newItemId = _tokenIds.current();
 
@@ -105,5 +107,8 @@ contract SandboxNFT is ERC721URIStorage {
 
     // Increment the counter for when the next NFT is minted.
     _tokenIds.increment();
+
+
+    emit NewNFTMinted(msg.sender, newItemId);
   }
 }

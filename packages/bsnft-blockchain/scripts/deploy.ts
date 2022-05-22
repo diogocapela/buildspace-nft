@@ -22,13 +22,13 @@ async function main() {
   console.log('Contract deployed to:', nftContract.address);
 
   // Call the function.
-  let txn = await nftContract.makeAnEpicNFT();
+  let txn = await nftContract.mintNewNFT();
 
   // Wait for it to be mined.
   await txn.wait();
 
   // Mint another NFT for fun.
-  txn = await nftContract.makeAnEpicNFT();
+  txn = await nftContract.mintNewNFT();
 
   // Wait for it to be mined.
   await txn.wait();

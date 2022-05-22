@@ -1,17 +1,13 @@
 
 {
-  "extends": "../../.eslintrc",
+
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-      "typescript": {
-        "project": ["tsconfig.json", "packages/bsnft-web/tsconfig.json"]
-      },
-      "node": {
-        "project": ["tsconfig.json", "packages/bsnft-web/tsconfig.json"]
-      }
+      "typescript": {},
+      "node": {}
     }
   },
   "rules": {

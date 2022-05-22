@@ -6,7 +6,8 @@
     "clean": "rm -rf artifacts && rm -rf cache && rm -rf typechain",
     "auto:generate-nft-data": "npm run clean && ts-node automation/generateNFTData.ts",
     "deploy": "npx hardhat run scripts/deploy.ts",
-    "deploy:rinkeby": "npx hardhat run scripts/deploy.ts --network rinkeby"
+    "deploy:rinkeby": "npx hardhat run scripts/deploy.ts --network rinkeby",
+    "verify:rinkeby": "npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "2.0.6",
